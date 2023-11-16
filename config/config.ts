@@ -5,6 +5,7 @@ export default {
     type: 'none', 
     exclude: [],
   },
+  publicPath: '/cc-hooks/',
   history: { type: 'hash' },
   extraBabelPlugins: [ // 添加babel配置
     [
