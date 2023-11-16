@@ -1,0 +1,27 @@
+name: Test CI
+on: # 当 master 分支有 push操作时，执行jobs
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout  ️
+        uses: actions/checkout@v2.3.1
+
+      - name: lock npm version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.18.0
+
+      - name: Install and Build # 安装依赖、打包
+        run: |
+          npm i -g pnpm
+          pnpm run init
+        env:
+          NODE_OPTIONS: '--max_old_space_size=4096'
+
+      - name: test # 执行测试用例
+        run: |
+          pnpm run test
