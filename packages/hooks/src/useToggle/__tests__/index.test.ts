@@ -19,6 +19,6 @@ describe('useToggle', () => {
     expect(hook.result.current[0]).toBeFalsy();
 
     callRight(hook)
-    expect(hook.result.current[0]).toBeFalsy()
+    expect(hook.result.current[0]).toBeTruthy()
   })
 })
