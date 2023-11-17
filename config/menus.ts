@@ -1,6 +1,6 @@
 export const menus = [
   {
     title: '基础',
-    children: ['useToggle']
+    children: ['useToggle', 'useBoolean']
   }
 ]
