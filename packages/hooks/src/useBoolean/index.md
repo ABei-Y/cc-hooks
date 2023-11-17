@@ -4,7 +4,7 @@ nav:
 ---
 
 # useBoolean
-用户在两个状态值之间切换的 Hook。
+优雅的管理 boolean 状态的 Hook。
 
 ## 代码演示
 
